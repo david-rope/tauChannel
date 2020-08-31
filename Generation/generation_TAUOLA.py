@@ -33,7 +33,6 @@ kkgeninput.param('tauinputFile', Belle2.FileSystem.findFile('data/generators/kkm
 kkgeninput.param('KKdefaultFile', Belle2.FileSystem.findFile('data/generators/kkmc/KK2f_defaults.dat'))
 kkgeninput.param('kkmcoutputfilename', 'LogFile/kkmc_tautau.tex')
 kkgeninput.param('taudecaytableFile', 'Data/tau_pi2munu.dat')
-main.add_module(kkgeninput)
 
 # run
 main.add_module("Progress")
