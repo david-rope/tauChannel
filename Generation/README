@@ -1,1 +1,3 @@
 Files in Generation save output info in a folder called "LogFile", then before you run these scripts you should create this folder.
+
+For generation_GEN_SIM_REC_w_Bkg.py you need the beam background files located in KEKCC and an error will apear if you try to run it. 
