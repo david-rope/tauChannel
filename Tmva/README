@@ -1,0 +1,7 @@
+The input files are in ../Preselection/NTuples but they are just test files. 
+
+How to run (root include in basf2),
+    root -l ./TMVAClassification.C\(\"BDT\"\)
+where we used BDT algorithm but the default algorithms will be trained without arguments.
+
+TMVAClassification.C is just for training, the script for application to a different sample is required.
