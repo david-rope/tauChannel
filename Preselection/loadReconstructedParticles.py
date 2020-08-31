@@ -134,7 +134,7 @@ pi0_variables = vc.mc_truth + \
 #    ['isFromECL', 'isFromKLM']
 
 # Saving variables to ntuple
-output_file = 'NTuples/tau_pi2munu_ReconstructedParticles_w_Bkg_1.root'
+output_file = 'NTuples/tau_pi2munu_ReconstructedParticles_wo_Bkg.root'
 ma.variablesToNtuple(decayString='pi+:all',
                      variables=charged_particle_variables,
                      treename='pion',
