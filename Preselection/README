@@ -1,0 +1,5 @@
+This files will be use to select the events that will be used to train the algorithms in TMVA.
+Now, they are just test files and filled only particle lists that need to be updated to the release-05-00-00
+
+Also, a NTuple folder should be created before run these scripts or change the save location.
+The input files can be changed but now they are in ..Generation/RootFiles
