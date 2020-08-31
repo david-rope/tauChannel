@@ -1,0 +1,1 @@
+Files in Generation save output info in a folder called "LogFile", then before you run these scripts you should create this folder.
