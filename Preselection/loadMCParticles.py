@@ -62,7 +62,7 @@ gamma_variables = vc.kinematics + \
     vc.cluster
 
 # Saving variables to ntuple
-output_file = 'NTuples/load_tau_pi2munu.root'
+output_file = 'NTuples/tau_pi2munu_MC_Generation.root'
 ma.variablesToNtuple(decayString='gamma:gen',
                      variables=charged_particle_variables,
                      treename='phot',
