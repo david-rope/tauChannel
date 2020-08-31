@@ -19,7 +19,7 @@ b2.conditions.reset()
 b2.conditions.prepend_globaltag("mc_production_MC13a_rev1")
 
 #: number of events to generate, can be overriden with -n
-num_events = 10000
+num_events = 1000
 
 # create path
 main = b2.create_path()
