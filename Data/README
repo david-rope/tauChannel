@@ -8,8 +8,8 @@ This folder contains the configuration file for
 based in Fortran and that will be used to generated our sample.
 
 You can generated
- * Only the MC sample to know the kinematics of the particles (../Generation/generation_TAUOLA.py)
- * Include the detector simulation and the propagation of the particles through them (../Generation/generation_GEN_SIM_REC_wo_Bkg.py)
- * And also you can add the beam background files (now they are only available in KEKCC).
+ * Only the MC sample to know the kinematics of the particles (../Generation/generation_TAUOLA.py).
+ * Include the detector simulation and the propagation of the particles through them (../Generation/generation_GEN_SIM_REC_wo_Bkg.py).
+ * And also you can add the beam background files (now they are only available in KEKCC) (../Generation/generation_GEN_SIM_REC_wo_Bkg.py).
  
  If you want to generate a different tau decay please add the configuration file here. 
