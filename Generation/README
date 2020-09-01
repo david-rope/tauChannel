@@ -1,3 +1,13 @@
-Files in Generation save output info in a folder called "LogFile", then before you run these scripts you should create this folder.
+This folder contains the generation scripts for three options.
 
-For generation_GEN_SIM_REC_w_Bkg.py you need the beam background files located in KEKCC and an error will apear if you try to run it. 
+You can generate
+ * Only the MC sample to know the kinematics of the particles (generation_TAUOLA.py).
+ * Include the detector simulation and the propagation of the particles through them (generation_GEN_SIM_REC_wo_Bkg.py).
+ * And also you can add the beam background files (now they are only available in KEKCC) (generation_GEN_SIM_REC_wo_Bkg.py).
+ 
+ The output files will save in RootFiles folder with root extension.
+ 
+ The main features include 
+  * The database condition (official MC conditions)
+  * Number of events
+  * The corresponding trigger configuration (now Phase 3)
