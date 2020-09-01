@@ -5,7 +5,7 @@ This folder contains the configuration file for
     |   -> pi+ mu- mu- nu_tau
     -> tau+ -> generic
 
-based in Fortran and that will be used to generated our sample.
+based in Fortran and that will be used to generate our sample.
 
 You can generated
  * Only the MC sample to know the kinematics of the particles (../Generation/generation_TAUOLA.py).
