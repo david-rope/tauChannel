@@ -9,11 +9,15 @@ We just filled the particle list for charged particles: e-, mu-, k and p.
 Also the particle list for photons and pi0.
 
 These particles lists are filled with reconstructed tracks and the corresponding mass hyphotesis.
-Which means that each track can be defined as e-, mu-, k or p.
+Which means that each track can be defined as e-, mu-, k or p (with the corresponding PID) and each 
+particle have their characteristics: momentum (3D vector), deposited energy, hit in each detector, etc.
+Furthermore, we have events variables like thrust, total deposited energy, spherical variables, etc.
 
+All these variables need to be optimized to obtain the biggest sample of our signal. Here, we need to
+consider the other background (bbbar, ccbar, ddbar, ...).
 
-Also, a NTuple folder should be created before run these scripts or change the save location.
-The input files can be changed but now they are in ..Generation/RootFiles
+The main idea of this step is to have only a tau+ tau- sample. Then it will apply  mva algorithms to discriminate
+our tau channel.
 
-But the output files will be use to train the algorithms in TMVA.
+To do: find out the size of the output files (grid requirements). Of course, write the preselection script. 
 
