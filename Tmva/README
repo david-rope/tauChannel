@@ -1,3 +1,8 @@
+This folder will have the scripts for training and application of different algorithms provided by 
+Toolkit for Multivariate Data Analysis (TMVA) with ROOT.
+
+Now we only have the 
+
 The input files are in ../Preselection/NTuples but they are just test files. 
 
 How to run (root include in basf2),
