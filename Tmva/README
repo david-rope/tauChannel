@@ -19,14 +19,16 @@ Now, this script is just an example, it includes
  
 Note: The variables to study does not have any meaning at this moment. But you can train the method you want.
 
---- to run (root is included in basf2, but you can run the script with only ROOT if you have the input files),
+--- How to run (root is included in basf2, but you can run the script with only ROOT if you have the input files),
 
 There are two options, set the methods in the script or select the methods as argument.
 
-In the first case, see lines 79 - 134.
+In the first case, see lines 79 - 134, it is a binary option: 
+  * 0 .- the method will not be trained
+  * 1 .- the method will be trained
+  
+In the second case, 
 
+  * root -l TMVAClassification.C\(\"myMethod1,myMethod2,myMethod3\"\)
 
-root -l ./TMVAClassification.C\(\"BDT\"\)
-where we used BDT algorithm but the default algorithms will be trained without arguments.
-
-TMVAClassification.C is just for training, the script for application to a different sample is required.
+where myMethodi should be replaced by the method you want to train.
