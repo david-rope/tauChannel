@@ -1,12 +1,32 @@
-This folder will have the scripts for training and application of different algorithms provided by 
+This folder will have scripts for training and application of different algorithms provided by 
 Toolkit for Multivariate Data Analysis (TMVA) with ROOT.
 
-Now we only have the 
+Now we only have the training script where we used as
+ * Signal: tau_pi2munu_MC_Generation.root (just MC generation)
+ * Background: tau_pi2munu_ReconstructedParticles_wo_Bkg.root (Belle II detector simulation)
+ 
+Both files were generated with files in ../Generation and they should be run before starting the training.
+Also, none of these files include weight files but they can be included (see line 300).
+The training sample can not be larger than the total sample (changed line 324 if needed).
+The output file will be TMVATauReview.root (line 200).
 
-The input files are in ../Preselection/NTuples but they are just test files. 
 
-How to run (root include in basf2),
-    root -l ./TMVAClassification.C\(\"BDT\"\)
+Now, this script is just an example, it includes 
+ * The input files (lines 174-175)
+ * The variables to study (line 235)
+ * algoritm for training (line 79 -134)
+ * algorithms settings  (lines 327-544)
+ 
+Note: The variables to study does not have any meaning at this moment. But you can train the method you want.
+
+--- to run (root is included in basf2, but you can run the script with only ROOT if you have the input files),
+
+There are two options, set the methods in the script or select the methods as argument.
+
+In the first case, see lines 79 - 134.
+
+
+root -l ./TMVAClassification.C\(\"BDT\"\)
 where we used BDT algorithm but the default algorithms will be trained without arguments.
 
 TMVAClassification.C is just for training, the script for application to a different sample is required.
