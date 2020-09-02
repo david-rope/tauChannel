@@ -7,23 +7,24 @@ Now we only have the training script where we used as
  
 Both files were generated with files in ../Generation and they should be run before starting the training.
 Also, none of these files include weight files but they can be included (see line 300).
-The training sample can not be larger than the total sample (changed line 324 if needed).
+The training sample can not be larger than the total sample (change line 324 if needed).
 The output file will be TMVATauReview.root (line 200).
 
 
-Now, this script is just an example, it includes 
+Now, this script is just an example, but it includes all necessary features   
  * The input files (lines 174-175)
  * The variables to study (line 235)
  * algoritm for training (line 79 -134)
  * algorithms settings  (lines 327-544)
  
-Note: The variables to study does not have any meaning at this moment. But you can train the method you want.
+The variables to study does not have any meaning at this moment. But you can train the method you want.
 
 --- How to run (root is included in basf2, but you can run the script with only ROOT if you have the input files),
 
 There are two options, set the methods in the script or select the methods as argument.
 
 In the first case, see lines 79 - 134, it is a binary option: 
+
   * 0 .- the method will not be trained
   * 1 .- the method will be trained
   
