@@ -1,0 +1,11 @@
+Previous to our analysis we will create and test all scripts with two toy samples.
+
+The two samples correspond to tau pairs and bbbars (mixed), both of them decaying generically.
+These files are in mdst format, so we need to create a table to train mva models.
+However, to have the option to export the data in a csv format we have an intermediate step, where 
+we will create ntuples from a list of objects (particles) and then create a vector (table) in plain format.
+
+The ntuples files will be created according to the event to study (for this test we choose tau -> pi pi pi nu) 
+with the scrips in the "Preselection" folder.
+
+In "MVA" folder there will be several options from basic to advance, but now it is in progress.
