@@ -1,0 +1,6 @@
+In this example, we create two independent samples, 10000 events for each.
+- For a generic sample of tau pairs use TauGen.py
+- For a generic sample of bbbar (mixed) use EvtGen.py
+
+Note: in both cases the output files are saved in "OutputFiles" folder,
+      please create it before to run the scripts.
