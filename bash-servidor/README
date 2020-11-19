@@ -1,0 +1,24 @@
+In this folder we can found the bash scripts to generate a sample in acaxees where basf2 through cvmfs was previously installed. 
+In this sense, you will probably need to change the release version used in these scripts, here the release-05-01-05 was used.
+
+Then, gen_mc.sh create a number of jobs with the script scripts/generation_GEN_SIM_REC_wo_Bkg.py, so you can change the
+script to generate a different sample. However, the number of event per jobs is set to 1000 because the jobs need to finish in 
+one hour otherwise they will kiil automatically. 
+
+How to run,
+bash gen_mc.sh [init job] [number of jobs]
+
+where [init job] is just an indice that will be used to set the name of the generated files, the total number of jobs will be
+setting by [number of jobs]. To save the samples a folder called 'batch' will be created with four kind of files, the 'script.sh'
+to run the job, 'script.sh.e...' to save the errors at running the job, 'script.sh.o...' to save the output while runnnig
+'generation_GEN_SIM_REC_wo_Bkg.py' and its output which will be 'sample.root'.
+
+After all jobs finish, it is important to create a new folder 'batch/RootFiles' and move the files 'samples.root' to there because
+ntuples.sh will be run in over these files, otherwise, you will need to choose them in other way.
+
+To used, ntuples.sh you need to choose the script inside the folder 'scripts' (just reconstruct_tau_3pipi0.py for the moment).
+How to run,
+bash ntuples.sh
+where their output is similar to gen_mc.sh, but a folder 'batchN' will be created.
+
+
