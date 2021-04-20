@@ -1,0 +1,62 @@
+GLM tools from R in TMVA
+
+#########################
+Prerequisites
+#########################
+The next packages will be necessary to compile R in Root:
+
+         install.packages(c('Rcpp','RInside','C50','ROCR','caret','RSNNS','e1071','devtools'), dependencies=TRUE)
+      
+  There are four methods (packages) already installed in TMVA: C50, e1071, RSNNS and xgboost. But xgboost needs to be installed 
+  from its repository
+  
+      https://xgboost.readthedocs.io/en/latest/build.html
+      
+         git clone --recursive https://github.com/dmlc/xgboost
+         cd xgboost
+         mkdir build
+         cd build
+         cmake ..
+         make -j $(nproc)
+         
+#########################
+  
+Logistic regression model in TMVA
+
+  It will be necessary to copy the four files in the corresponding locations:
+
+CMakeLists.txt
+          root.version/tmva/rmva/
+LinkDef.h
+          root.version/tmva/rmva/inc/
+MethodRGLM.cxx
+          root.version/tmva/rmva/src/
+MethodRGLM.h
+          root.version/tmva/rmva/inc/TMVA/
+
+                       Note: now the only version tested was root-6.20.04
+
+#########################
+
+Compile Root
+
+  After download and unpack the ROOT source version create the building folder and activate the rtmva flag:
+  
+     mkdir compile
+     cd compile
+     cmake -Dr=ON ..
+     make -j $(nproc)
+
+########################
+
+Activate root enviroment variables
+
+     source root-version/compile/bin/thisroot.sh
+     
+########################
+
+Testing GLM tools
+
+Run Classification.C to test logistic regression model.
+  
+     root Classification.C
