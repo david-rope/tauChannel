@@ -33,6 +33,8 @@ MethodRGLM.cxx
           root.version/tmva/rmva/src/
 MethodRGLM.h
           root.version/tmva/rmva/inc/TMVA/
+Types.h
+          root-version/tmva/tmva/inc/TMVA/
 
                        Note: now the only version tested was root-6.20.04
 
