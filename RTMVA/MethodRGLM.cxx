@@ -230,7 +230,7 @@ std::vector<Double_t> MethodRGLM::GetMvaValues(Long64_t firstEvt, Long64_t lastE
    if (IsModelPersistence()) ReadModelFromFile();
  
    std::vector<Double_t> mvaValues(nEvents);
-   ROOT::R::TRObject result = predict(*fModel, ROOT::R::Label["data"] = evtData, ROOT::R::Label["type"] = "response");
+   ROOT::R::TRObject result = predict(*fModel, ROOT::R::Label["newdata"] = evtData, ROOT::R::Label["type"] = "response");
    mvaValues = result.As<std::vector<Double_t>>();
 
    if (logProgress) {
