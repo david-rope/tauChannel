@@ -1,0 +1,28 @@
+Las siguientes instrucciones permiten Rankiar un conjunto de variables, las cuales se encuentran incluidas en el archivo Classification_all.C calculando la separacion de cada una de ellas, esta opcion  se encuentra en la deficion de la fabrica de tmva y corresponde a las lineas 33 y 34, especificamente a la opcion 
+
+  Transformation=I
+
+El archivo tambien incluye otras transformaciones y entrenamiento de algoritmos pero que pueden ser omitidos. La intencion del archivo es guardar el ranking de las variables en un archivo de texto para posteriormente crear los scripts con un aumento progresivo del numero de variables que seran utilizadas para entrenar los argoritmos de machine learning. Para guardar la salida de Classification_all.C se requiere incluir 
+
+  root Classification_all.C > variables.txt 
+
+Si se cambia el nombre de variables.txt tambien debe ser cambiado en el script readVariables.sh (dentro del script esta comentada la opcion anterior). Para crear los scripts 
+
+  bash readVariables.sh
+
+donde se creara la carpeta VarScripts, el primer script utilizara el archivo Classification.C en el cual todas las variables estan comentadas, por lo que se descomentara primera del ranking y se guardara el archivo con otro nombre, despues la segunda y se guardara con otro nombre, etc. Despues de crear todos los scripts se ejecutan con root, 
+lineas 44-48, donde se guarda la salida de cada uno con el fin de conocer el area bajo la curva de la grafica ROC. Finalmente se reemplaza el archivo con las variables comentadas para comenzar de nuevo si es necesario.
+
+Para leer el AUC de cada modelo y crear el archivo plot.dat es necesario ejecutar 
+
+  bash plotValues.sh
+
+El archivo plot.dat contiene corresponde a todos los modelos entrenados y puede graficarse utilizando el script grafica.C
+
+  root grafica.C
+
+Pero para seleccionar las variables que tienen una aportacion mayor a .001 en AUC y ordenar las variables por ranking (revisar el archivo de salida - de lo contrario cambiar la variable de ordenamiento) y guardar la posicion del ranking en el archivo plotSlope.dat ejecutar 
+
+  root SlopeAUC.C
+
+Con las variables seleccionadas se creara el modelo final con el script 
